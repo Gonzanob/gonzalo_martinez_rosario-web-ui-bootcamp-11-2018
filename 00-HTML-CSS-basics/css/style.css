@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+.header {
+  font-size: 46px;
+  margin: 0px;
+  border-width: 0px;
+  text-align: center;
+}
+h1, h2 {
+  margin: auto;
+}
+.content {
+  font-size: 14px;
+  align: center;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+.footer {
+  font-size: 10px;
+  margin: auto;
+  text-align: center;
+}
+.navigation {
+  padding-top: 38px;
+  padding-bottom: 38px;
+  font-size: 12px;
+  float: left;
+  margin: auto;
+  text-align: center;
+  width: 20%;
+  background-color: blue;
+}
+.sidebar {
+  padding-top: 41px;
+  padding-bottom: 41px;
+  font-size: 10px;
+  float: right;
+  margin: auto;
+  text-align: center;
+  width: 20%;
+  background-color: blue;
+}
+article {
+  background-color: blue;
+}
+header, footer {
+  background-color: magenta;
+}
