@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-style: "Arial";
+}
+.container {
+  margin: 0 auto;
+  max-width: 48rem;
+  width: 90%;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+@media (min-width: 40rem) {
+  .column.flow-opposite { float: right; }
+}
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+    padding: 1rem;
+  }
+  
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }  
+}
+.hero.sven {
+  background-image: url("../dota_heroes/sven_full.png");
+}
+.hero.axe {
+  background-image: url("../dota_heroes/axe_full.png");
+}
+.hero.ursa {
+  background-image: url("../dota_heroes/ursa_full.png");
+}
+.hero.lifestealer {
+  background-image: url("../dota_heroes/life_stealer_full.png");
+}
+.hero.void {
+  background-image: url("../dota_heroes/faceless_void_full.png");
+}
+.hero.blood {
+  background-image: url("../dota_heroes/bloodseeker_full.png");
+}
+.hero {
+  width: 220px;
+  height: 144px;
+  background-position: center;
+  margin: auto;
+}
+.hero>span {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+.hero:hover>span {
+  display: block;
+  background-color: rgba(255,255,255,0.5);
+  
+}
