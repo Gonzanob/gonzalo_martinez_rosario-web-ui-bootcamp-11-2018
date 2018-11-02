@@ -1,4 +1,4 @@
-document.onload(unvanish());
+window.onload = unvanish();
 
  function unvanish() {
      let tounvanish = document.getElementById("toshowsection");
