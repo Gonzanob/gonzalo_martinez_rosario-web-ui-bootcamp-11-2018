@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <title>Forms</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+
+<body>
+  <header>
+    <h1>Practicing forms</h1>
+  </header>
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" id="fname" value="" placeholder="Gonzalo" required/>
+    <br/>
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname" id="lname" value="" placeholder="Martinez" required/>
+    <br/>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="" placeholder="gonzmartinez96@gmail.com" required/>
+    <br/>
+    <label for="bday">Birthday</label>
+    <input type="date" name="bday" id="bday" value="" required/>
+    <p><label for="fsport">Favourite Sport</label></p>
+    <select name="fsport" id="fsport">
+      <option value="football">Football</option>
+      <option value="basketball">Basketball</option>
+      <option value="volley">Volleyball</option>
+    </select>
+    <p><label for="bio">Biography</label></p>
+    <textarea name="bio" rows="10" cols="30" id="bio" placeholder="The biography goes here."></textarea>
+    <br/><br/>
+    <label><input type="submit" id="submit" value="Submit"><!--how do i label submit and reset? --></label>
+    <label for="reset"></label>
+    <input type="reset" id="reset" value="Reset">
+  </form>
+</body>
+
+</html>
