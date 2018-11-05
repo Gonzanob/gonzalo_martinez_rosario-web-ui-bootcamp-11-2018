@@ -48,3 +48,32 @@ function requestApi(reqtype, url, sync)
 }
 
 document.getElementById("alertbutton").addEventListener("click", requestJoke);
+var qbutton = document.getElementById("qbutton");
+qbutton.addEventListener("click", requestviagit);
+
+function requestviagit()
+{
+    var tosearch = document.getElementById("tosearch")
+    var textosearch = tosearch.value;
+    var promise = requestApi("GET", "https://api.github.com/search/repositories?q=" + "'" + textosearch + "'", true);
+    promise.then(function (obj)
+    {
+        var obj_json = JSON.parse(obj);
+        return obj_json.items;
+    }).then(function(items)
+    {
+        var cont = document.getElementById("repo-container");
+        var fragment = document.createDocumentFragment();
+        var list = document.createElement("ul");
+        var k = items.length;
+        for( i = 0 ; i < items.length; i++) 
+            {
+                var templist = document.createElement("li");
+                var textnode = document.createTextNode(items[i].name);
+                templist.appendChild(textnode);
+                list.appendChild(templist);
+            }
+        fragment.appendChild(list);
+        cont.appendChild(fragment);
+    });
+}
