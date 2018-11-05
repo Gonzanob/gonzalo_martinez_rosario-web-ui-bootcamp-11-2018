@@ -1,0 +1,17 @@
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}  
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+h1, article {
+    text-align: center;
+}
+
+/*section#toshowsection {
+    visibility: hidden;
+    opacity: 0;
+}*/
