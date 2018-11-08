@@ -20,29 +20,61 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-<header>
+
+<header style="margin: auto;">
   <h1>Some Articles</h1>
 </header>
-  
-  <section>
-    <article>
-      <span>Some interesting article</span>
-    </article>
-    <article>
-      <span>Some really interesting article</span>
-    </article>
-    <article>
-      <span>Some mind blowing article</span>
-    </article>
-  </section>
 
-  <section id="toshowsection" hidden>
-    <article>
-      <span>Some borring article</span>
-    </article>
-  </section>
+<div style="float: right;">
+  <aside>
+    <div style="text-align: center;">
+      <input type="text" id="tosearch"/>
+    </div>
+    <div style="text-align: center;">
+      <button id="qbutton" style="margin: auto;">Search</button>
+    </div>
+    <div style="text-align: center;">
+      <button id="qbutton_table" style="margin: auto;">Search and place in a table</button>
+    </div>
+    <section id="repo-container">
+    </section>
+  </aside>
+</div>
+
+<div style="margin: auto; text-align: center; width: 75%;">
+  <div>
+    <section>
+      <article>
+        <span>Some interesting article</span>
+      </article>
+      <article>
+        <span>Some really interesting article</span>
+      </article>
+      <article>
+        <span>Some mind blowing article</span>
+      </article>
+    </section>
+  </div>
+
+  <div>
+    <section id="toshowsection" hidden>
+      <article>
+        <div>
+          <span>Some borring article</span>
+        </div>
+        <div>
+          <span id="jokeplace"></span>
+        </div>
+      </article>
+    </section>
+  </div>
     
-  <script src="js/main.js"></script>
+  <div id="but">
+    <button id="alertbutton">Pss kids</button>
+  </div>  
+</div>
+
+<script src="js/main.js"></script>
 
 </body>
 
