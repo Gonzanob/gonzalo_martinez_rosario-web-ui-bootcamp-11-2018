@@ -1,4 +1,4 @@
-class multi
+export class multi
 {
 	// Inherit method to create base classes.
 	static inherit(..._bases)
@@ -44,5 +44,3 @@ class multi
     		}
 	}
 }
-
-export { multi }
