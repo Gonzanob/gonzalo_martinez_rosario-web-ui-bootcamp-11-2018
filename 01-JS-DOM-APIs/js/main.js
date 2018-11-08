@@ -6,6 +6,7 @@ window.onload = unvanish();
      tounvanish.style.animation = "fadeIn 2s";
 //     tounvanish.setAttribute("style", "visibility: visible; opacity: 1;");
  }
+<<<<<<< HEAD
 
 function showAlert() {
     alert("Want some magic?");
@@ -132,3 +133,5 @@ function requestviagit_table()
         
     });
 }
+=======
+>>>>>>> 430d6137c25d7b5c079d3b832e5fa2c91d50f76e
