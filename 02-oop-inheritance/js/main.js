@@ -1,8 +1,8 @@
 import * as Actor from "/js/actor.js";
 import * as Logger from "/js/logger.js";
-import * as social from "/js/social.js";
-import * as multi from "/js/multiinherit.js";
-import * as EventEmitter from "/js/events.js";
+import {social} from "/js/social.js";
+import {multi} from "/js/multiinherit.js";
+import {EventEmitter} from "/js/events.js";
 
 
 class Movie extends multi.inherit(EventEmitter, social)

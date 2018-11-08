@@ -1,4 +1,4 @@
-export class multi
+class multi
 {
 	// Inherit method to create base classes.
 	static inherit(..._bases)
@@ -24,8 +24,8 @@ export class multi
 		// Copy over properties and methods
 		for (let base of _bases) 
 		{
-   			multi.copy(classes, base);
-   			multi.copy(classes.prototype, base.prototype);
+			multi.copy(classes, base);
+			multi.copy(classes.prototype, base.prototype);
 		}
 
 		return classes;
@@ -43,4 +43,6 @@ export class multi
         		}
     		}
 	}
-} 
+}
+
+export { multi }
