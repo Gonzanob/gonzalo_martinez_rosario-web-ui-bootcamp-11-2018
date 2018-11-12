@@ -1,0 +1,25 @@
+<h2>Movie Catalog</h2>
+<div *ngIf="movies">
+  <ul>
+    <li *ngFor="let movie of movies" class="movies">
+      <a routerLink="/detail/{{movie.id}}">
+        <span>{{movie.name | uppercase}}</span>
+      </a>
+      <span style="float: right;"><button class="delete" title="delete movie"
+        (click)="delete(movie)">X</button></span>
+    </li>
+  </ul>
+</div>
+<div>
+  <label>Movie Name:
+    <input #movieName />
+  </label>
+  <br/>
+  <label>Movie Duration:
+    <input #movieDuration />
+  </label>
+  <br/>
+  <button (click)="add(movieName.value, movieDuration.value); movieName.value=''; movieDuration.vale=''">
+    Add
+  </button>
+</div>
