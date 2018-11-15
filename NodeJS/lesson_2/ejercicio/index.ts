@@ -18,20 +18,30 @@ const file: string = json["file"];
 const version: string = json["version"];
 
 var app = express();
-app.get("/msg=:msg", function(req, res) {
+app.get("/msg=*", function(req, res) {
     var promise: Promise<string> = new Promise((resolve, reject) =>
     {
-        var message: string = req.params.msg;
-        if(!message) { reject("Invalid messsage"); }
-        
+        var messages: string[] = req.baseUrl.split("/");
+        var url: string[] = req.originalUrl.split("/").slice(1);
         const _uuid: string = uuid();
-
-        var toWrite: Logfile = { sessionId: _uuid, msg: message };
-
-        fs.appendFile(file, JSON.stringify(toWrite, null, ' ') +",\n", 'utf8', (err) => {
-            if (err) { reject("Failed to write to file"); }
-            resolve("Success");
-        });
+        var toWrite: Logfile[] = [];
+        var invalid: boolean = false;
+        
+        url.forEach((command: string) => {
+            if(command) {
+                if(command.startsWith("msg=")) {
+                    toWrite.push( {sessionId : _uuid, msg: command.slice(4)});
+                }
+                else { invalid = true; }
+            }
+        })
+        if(invalid) { reject("Invalid Command"); }
+        else {
+            fs.appendFile(file, JSON.stringify(toWrite, null, ' ') +",\n", 'utf8', (err) => {
+                if (err) { reject("Failed to write to file"); }
+                resolve("Success");
+            });
+        }
     });
     promise.then(function(code: string): void {
         res.send(code);
