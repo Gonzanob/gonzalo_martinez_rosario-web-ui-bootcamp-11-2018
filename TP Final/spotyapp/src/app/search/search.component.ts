@@ -41,6 +41,16 @@ export class SearchComponent implements OnInit {
       });
   }
 
+  update_fields(input: search_interface) {
+    this.to_search = {
+      "album": input.album,
+      "artist": input.artist,
+      "playlist": input.playlist,
+      "text": input.text,
+      "track": input.track
+    }
+  }
+
   private parse_received(received: Paging_Object[]) {
     var i: number = 0;
     var j: number = 0;
