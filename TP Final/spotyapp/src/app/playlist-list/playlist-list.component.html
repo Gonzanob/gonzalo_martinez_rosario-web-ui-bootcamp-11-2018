@@ -1,0 +1,16 @@
+<div class="flex-container main">
+
+  <div class="flex-container list">
+    
+    <div *ngFor="let playlist of to_draw" class="flex-container playlist">
+      <app-draw [to_draw]="playlist" (click)="select(playlist)"></app-draw>
+      
+    </div>
+
+  </div>
+
+  <div class="player" *ngIf="selected !== null">
+      <iframe [src]="url" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+
+</div>

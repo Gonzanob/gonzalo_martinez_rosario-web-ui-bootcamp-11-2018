@@ -1,0 +1,18 @@
+[
+ {
+  "date": "Mon Nov 26 2018",
+  "album": false,
+  "track": true,
+  "artist": false,
+  "playlist": false,
+  "text": "muse"
+ },
+ {
+  "date": "Mon Nov 26 2018",
+  "album": false,
+  "track": true,
+  "artist": false,
+  "playlist": false,
+  "text": "asd"
+ }
+]

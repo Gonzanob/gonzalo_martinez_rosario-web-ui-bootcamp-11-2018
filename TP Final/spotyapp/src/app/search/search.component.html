@@ -1,0 +1,79 @@
+<div *ngIf="logged">
+  <div class="main">
+
+    <div>
+      <div>
+        <h1>Search something</h1>
+      </div>
+
+      <div class="input_container">
+        <input [(ngModel)]="to_search.text" placeholder="Tito el bambino" style="color: black;"/>
+        <br/>
+        <input type="checkbox" [(ngModel)]="to_search.artist"><span>Artist</span>
+        <input type="checkbox" [(ngModel)]="to_search.track"><span>Track</span>
+        <input type="checkbox" [(ngModel)]="to_search.album"><span>Album</span>
+        <input type="checkbox" [(ngModel)]="to_search.playlist"><span>Playlist</span>
+      </div>
+      <br/>
+      <div>
+        <button (click)="search()" style="color:black;">Search</button>
+      </div>
+    </div>
+
+
+    <div class="history" *ngIf="history.length > 0">
+      <h2>Recently Searched</h2>
+      <div *ngFor="let line of history">
+        <button (click)="update_fields(line)" style="color:black;">Reuse</button>
+        <span style="pointer-events: none;">
+          <input value="{{line.text}}" class="history input">
+          <span>A</span>
+          <input type="checkbox" checked  *ngIf="line.artist">
+          <input type="checkbox"  *ngIf="!(line.artist)">
+          <span>T</span>
+          <input type="checkbox" checked *ngIf="line.track">
+          <input type="checkbox" *ngIf="!(line.track)">
+          <span>A</span>
+          <input type="checkbox" checked *ngIf="line.album">
+          <input type="checkbox" *ngIf="!(line.album)">
+          <span>P</span>
+          <input type="checkbox" checked *ngIf="line.playlist">
+          <input type="checkbox" *ngIf="!(line.playlist)">
+        </span>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <div class="search_container">
+      <div *ngIf="to_draw !== []">
+          <div *ngFor="let drawing of to_draw">
+            <app-draw [to_draw]=drawing></app-draw>
+          </div>
+        </div>
+
+  </div>> -->
+
+  <!-- <div class="search_container header">
+    <div *ngFor="let type of showed_types">{{type | uppercase}}</div>
+  </div> -->
+
+  <h1 *ngIf="showed_types.length > 0" style="text-align: center;">Search Results</h1>
+
+  <div class="search_container">
+    <div *ngFor="let type of to_draw2; let i = index">
+      <div style="font-size: 30px; text-align: center;">{{showed_types[i] | uppercase}}</div>
+      <div class="container tipo" *ngIf="type !== []">
+          <div *ngFor="let drawing of type">
+              <a href="{{drawing.external_urls['spotify']}}">
+                <app-draw [to_draw]=drawing></app-draw>
+              </a>
+              
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

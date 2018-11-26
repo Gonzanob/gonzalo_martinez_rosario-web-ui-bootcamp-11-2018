@@ -1,0 +1,45 @@
+* {
+    color: white;
+}
+
+.image>img {
+    padding: 5px;
+    border-radius: 100%;
+    padding-bottom: 0;
+}
+.image {
+    display: inline-block;
+    width: fit-content;
+}
+.card {
+    width: 600px;
+}
+
+.card.header {
+    background-color: #3aa53a;
+    height: 35px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 25px;
+}
+.card.header.text {
+    width: fit-content;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.card.body.text {
+    position: relative;
+    bottom: 70px;
+    display: inline-block;
+    width: fit-content;
+    font-size: 20px;
+    padding-left: 20px;
+    color: black;
+}
+
+.card.body {
+    background-color: #1e1e1e;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 8px;
+}
