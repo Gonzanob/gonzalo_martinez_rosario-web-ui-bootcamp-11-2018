@@ -1,9 +1,9 @@
 <div *ngIf="logged">
   <div class="main">
 
-    <div>
-      <div>
-        <h1>Search something</h1>
+    <div class="input_main">
+      <div class="input_main header">
+        Search Something
       </div>
 
       <div class="input_container">
@@ -15,14 +15,16 @@
         <input type="checkbox" [(ngModel)]="to_search.playlist"><span>Playlist</span>
       </div>
       <br/>
-      <div>
+      <div style="text-align: center;">
         <button (click)="search()" style="color:black;">Search</button>
       </div>
     </div>
 
 
     <div class="history" *ngIf="history.length > 0">
-      <h2>Recently Searched</h2>
+      <div class="history header">
+          Recently Searched
+        </div>
       <div *ngFor="let line of history">
         <button (click)="update_fields(line)" style="color:black;">Reuse</button>
         <span style="pointer-events: none;">
@@ -59,21 +61,19 @@
     <div *ngFor="let type of showed_types">{{type | uppercase}}</div>
   </div> -->
 
-  <h1 *ngIf="showed_types.length > 0" style="text-align: center;">Search Results</h1>
+  <h2 *ngIf="showed_types.length > 0"  style="text-align: center;">Search Results</h2>
 
   <div class="search_container">
-    <div *ngFor="let type of to_draw2; let i = index">
-      <div style="font-size: 30px; text-align: center;">{{showed_types[i] | uppercase}}</div>
-      <div class="container tipo" *ngIf="type !== []">
+    <div *ngFor="let type of to_draw2; let i = index" class="loop">
+        <div class="container header">{{showed_types[i] | uppercase}}</div>
+        <div class="container tipo" *ngIf="type !== []">
           <div *ngFor="let drawing of type">
-              <a href="{{drawing.external_urls['spotify']}}">
-                <app-draw [to_draw]=drawing></app-draw>
-              </a>
-              
+            <a href="{{drawing.external_urls['spotify']}}">
+              <app-draw [to_draw]=drawing></app-draw>
+            </a>
+                
           </div>
-      </div>
-
-    </div>
+        </div>
   </div>
 
 </div>

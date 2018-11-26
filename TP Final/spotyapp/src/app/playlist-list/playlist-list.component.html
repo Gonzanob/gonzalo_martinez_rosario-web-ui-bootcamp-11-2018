@@ -1,6 +1,7 @@
 <div class="flex-container main">
 
-  <div class="flex-container list">
+  <div class="flex-container list" *ngIf="to_draw !== []">
+    <div class="header">Playlists</div>
     
     <div *ngFor="let playlist of to_draw" class="flex-container playlist">
       <app-draw [to_draw]="playlist" (click)="select(playlist)"></app-draw>

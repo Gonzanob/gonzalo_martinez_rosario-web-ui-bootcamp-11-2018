@@ -82,6 +82,9 @@ export class SearchComponent implements OnInit {
               j++;
               i = 0;
             }
+            if(!this.to_draw2[j]) {
+              this.to_draw2[j] = [];
+            }
 
             this.to_draw2[j].push({
               "name" : received[key].items[key2].name,
@@ -101,7 +104,7 @@ export class SearchComponent implements OnInit {
         this.spotiapi.search(this.to_search)
           .subscribe(search => {
             //this.to_draw = [];
-            this.to_draw2 = [[],[],[],[]];
+            this.to_draw2 = [];
             this.showed_types = [];
             this.parse_received(search);
           });
@@ -122,7 +125,7 @@ export class SearchComponent implements OnInit {
     }
     //this.to_draw = [];
     this.logged = false;
-    this.to_draw2 = [[],[],[],[]];
+    this.to_draw2 = [];
     this.getLastSearched();
     this.showed_types = [];
     this.areWeLogged();

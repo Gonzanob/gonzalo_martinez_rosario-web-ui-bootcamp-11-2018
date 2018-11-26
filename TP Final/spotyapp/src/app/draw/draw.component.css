@@ -5,13 +5,14 @@
 
 .flex-container {
     display: flex;
-    background-color: gray;
+    background-color: #1e1e1e;
     border-radius: 15px;
-    margin: 1%;
+    margin: inherit;
     flex-grow: 1;
     flex-basis: 400px;
     width: 400px;
     height: 140px;
+    color: white;
 }
 
 .image {
