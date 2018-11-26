@@ -1,0 +1,14 @@
+
+<div *ngIf="to_draw !== null">
+
+
+  <div class="flex-container">
+    <div class="image container">
+      <img class="image" src="{{to_draw.images[0].url}}" *ngIf="to_draw.images.length > 0"/>
+      <img class="image" [src]="not_found_url" *ngIf="to_draw.images.length == 0">
+    </div>
+    <div class="text">{{to_draw.name}}</div>
+  </div>
+
+
+</div>

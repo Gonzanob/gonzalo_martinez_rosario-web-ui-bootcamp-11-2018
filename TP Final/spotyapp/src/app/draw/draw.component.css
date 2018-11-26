@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.flex-container {
+    display: flex;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    margin: inherit;
+    flex-grow: 1;
+    flex-basis: 400px;
+    width: 400px;
+    height: 140px;
+    color: white;
+}
+
+.image {
+    object-fit: fill;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+.image.container {
+    margin: 1%;
+    flex-basis: 128px;
+    width: 128px;
+    height: 128px;
+    border-radius: 15px;
+    flex-grow: 0;
+    align-self: center;
+}
+
+.text {
+    flex-grow: 1;
+    font-size: 20px;
+    align-self: center;
+}

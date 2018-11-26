@@ -1,0 +1,21 @@
+<div *ngIf="logged" style="justify-content: center; display: flex;">
+<div *ngIf="user_info !== null" class="card">
+
+  <div class="card header">
+    <div class="card header text">{{user_info.display_name}}</div>
+  </div>
+  <div class="card body">
+    <div class="image">
+      <img src="{{user_info.images[0].url}}"/>
+    </div>
+    <div class="card body text">
+      <div>Email: {{user_info.email}}</div>
+      <div>Followers: {{user_info.followers["total"]}}</div>
+      <div>Account: {{user_info.product}}</div>
+    </div>
+  </div>
+
+
+
+</div>
+</div>

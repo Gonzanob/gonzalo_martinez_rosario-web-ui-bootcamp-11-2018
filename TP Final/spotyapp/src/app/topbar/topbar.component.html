@@ -1,0 +1,17 @@
+<div class="flex-container">
+  <div class="element login-button" *ngIf="!logged">
+    <a href="http://localhost:8888/login">Login</a>
+  </div>
+  <div class="element logout" *ngIf="logged">
+      <a href="http://localhost:8888/logout">Logout</a>
+    </div>
+  <div class="element userinfo">
+      <a href="http://localhost:4200/userinfo">User</a>
+    </div>
+  <div class="element playlist">
+    <a href="http://localhost:4200/playlist">User Playlists</a>
+  </div>
+  <div class="element search">
+    <a href="http://localhost:4200/search">Search</a>
+  </div>
+</div>
