@@ -1,0 +1,14 @@
+.movies {
+    font-family: "Arial";
+    width: 20%;
+    background-color: blue;
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+    margin: 5px;
+    color: white;
+    display: table;
+}
+.movies>a {
+    color: white;
+}

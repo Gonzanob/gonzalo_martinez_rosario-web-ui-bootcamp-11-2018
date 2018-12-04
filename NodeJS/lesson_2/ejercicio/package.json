@@ -1,0 +1,21 @@
+{
+  "name": "ejercicio2",
+  "version": "1.0.0",
+  "description": "Tomando el logger anterior, realizar un refactor para que tome los msg via peticion HTTP,",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gonzalo Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^10.12.7",
+    "@types/uuid": "^3.4.4",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ejercicio1",
+  "version": "1.0.0",
+  "description": "El ejercicio consistira en crear un logger al cual se le proveeran los datos a loggear por  argumentos de consola.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^10.12.5",
+    "@types/yargs": "^12.0.1",
+    "fs": "0.0.1-security",
+    "yargs": "^12.0.2"
+  }
+}
